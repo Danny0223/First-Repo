@@ -15,8 +15,8 @@ class Meal(object):
     def __init__(self, _name, _ingredientList):
         self.name = _name
         self.ingredientList = _ingredientList
-        var_dict=
-            [
+        var_dict =
+            {
                 {
                     name:"Burger"
                         [
@@ -151,7 +151,7 @@ class Meal(object):
                             ingred4:"ketchup"
                             ingred4:"mustard"
                         ],
-                }
+                };
      def post(self):
             userMeal = self.request.get("meal_choice")
 
@@ -178,6 +178,9 @@ class ViewHandler(webapp2.RequestHandler):
     def get(self):
         results_template = the_jinja_env.get_template('templates/view_all_meals.html')
         self.response.write(results_template.render())
+
+    def post(self):
+        Meal = self.request.get("userMeal")
 
 
 
