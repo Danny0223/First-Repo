@@ -8,11 +8,17 @@ the_jinja_env = jinja2.Environment(
     autoescape=True
 )
 
+class EnterInfoHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.headers['Content-Type'] = 'text/html'
+        welcome_template = the_jinja_env.get_template('templates/welcome.html')
+        self.response.write(welcome_template.render())
+
 
 
 
 
 
 app = webapp2.WSGIApplication([
-    ('/',  ), 
+    ('/',  ),
 ], debug=True)
