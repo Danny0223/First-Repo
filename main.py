@@ -76,7 +76,7 @@ class Meal(object):
                             ingred9:"garlic powder",
                             ingred10:"salt",
                             ingred11:"pepper"
-                        ]
+                        ],
                     name:"Enchiladas"
                         [
                             ingred1:"groundbeef",
@@ -85,7 +85,7 @@ class Meal(object):
                             ingred4:"sauce",
                             ingred5:"cheese",
                             ingred6:"green chiles"
-                        ]
+                        ],
                     name:"Stew"
                         [
                             ingred1:"beef",
@@ -99,14 +99,14 @@ class Meal(object):
                             ingred9:"veggie broth",
                             ingred10:"salt",
                             ingred11:"pepper"
-                        ]
+                        ],
                     name:"Pizza"
                         [
                             ingred1:"dough",
                             ingred2:"tomato sauce",
                             ingred3:"cheese",
                             ingred4:"pepperoine",
-                        ]
+                        ],
                     name:"Dumplings"
                         [
                             ingred1:"flour",
@@ -114,7 +114,7 @@ class Meal(object):
                             ingred3:"salt",
                             ingred4:"milk",
                             ingred5:"butter"
-                        ]
+                        ],
                     name:"Casserole"
                         [
                             ingred1:"red peppers"
@@ -123,7 +123,7 @@ class Meal(object):
                             ingred4:"squash"
                             ingred5:"mushrooms"
                             ingred6:"pasta"
-                        ]
+                        ],
                     name:"Chile"
                         [
                             ingred1:"groundbeef"
@@ -132,7 +132,7 @@ class Meal(object):
                             ingred4:"green pepper"
                             ingred5:"beans"
                             ingred6:"garlic"
-                        ]
+                        ],
                     name:"MacNCheese"
                         [
                             ingred1:"Pasta"
@@ -140,7 +140,7 @@ class Meal(object):
                             ingred3:"cheese"
                             ingred4:"cheese"
                             ingred4:"milk"
-                        ]
+                        ],
                     name:"Hot dog"
                         [
                             ingred1:"bread"
@@ -148,15 +148,19 @@ class Meal(object):
                             ingred3:"cheese"
                             ingred4:"ketchup"
                             ingred4:"mustard"
-                        ]
+                        ],
                 }
+        def post(self):
+            userMeal = self.request.get("meme_choice")
 
+            var_dict = {
+                "meme_img_url": memeStringToUrl(userMeme)
+            }
+                results_template = the_jinja_env.get_template('templates/results.html')
+                self.response.write(results_template.render(var_dict))
 
-
-
-            ]
 m1 = Meal("Burger",)
-"""
+
 class EnterInfoHandler(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
@@ -168,10 +172,10 @@ class FoodInfoHandler(webapp2.RequestHandler):
         results_template = the_jinja_env.get_template('templates/Burgers.html')
         self.response.write(results_template.render())
 
-"""
+
 
 
 app = webapp2.WSGIApplication([
     ('/',EnterInfoHandler ),
-    ('/danny',FoodInfoHandler)
+    ('/food',FoodInfoHandler)
 ], debug=True)
