@@ -2,6 +2,8 @@
 import webapp2
 import jinja2
 import os
+import models
+from models import Food_Meal
 
 the_jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -166,10 +168,15 @@ class EnterInfoHandler(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'text/html'
         welcome_template = the_jinja_env.get_template('templates/index.html')
         self.response.write(welcome_template.render())
-
+"""
 class FoodInfoHandler(webapp2.RequestHandler):
     def get(self):
         results_template = the_jinja_env.get_template('templates/Burgers.html')
+        self.response.write(results_template.render())
+"""
+class ViewHandler(webapp2.RequestHandler):
+    def get(self):
+        results_template = the_jinja_env.get_template('templates/view_all_meals.html')
         self.response.write(results_template.render())
 
 
@@ -178,4 +185,5 @@ class FoodInfoHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/',EnterInfoHandler ),
     ('/food',FoodInfoHandler)
+    ('/view_all_meals',ViewHandler)
 ], debug=True)
