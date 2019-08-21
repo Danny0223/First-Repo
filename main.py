@@ -150,7 +150,7 @@ class Meal(object):
                             ingred4:"mustard"
                         ],
                 }
-        def post(self):
+     def post(self):
             userMeal = self.request.get("meal_choice")
 
             var_dict = {
