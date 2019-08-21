@@ -151,10 +151,10 @@ class Meal(object):
                         ],
                 }
         def post(self):
-            userMeal = self.request.get("meme_choice")
+            userMeal = self.request.get("meal_choice")
 
             var_dict = {
-                "meme_img_url": memeStringToUrl(userMeme)
+                "meme_img_url": memeStringToUrl(userMeal)
             }
                 results_template = the_jinja_env.get_template('templates/results.html')
                 self.response.write(results_template.render(var_dict))

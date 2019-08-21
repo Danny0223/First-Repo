@@ -1,7 +1,12 @@
 from google.appengine.ext import ndb
 
-class BlogPost(ndb.Model):
-    title = ndb.StringProperty(required=True)
-    content = ndb.StringProperty(required=True)
-    Name = ndb.StringProperty(required=True)
-    #def autoplay(self):
+class Food_Meal(ndb.Model):
+    name = ndb.StringProperty(required=True)
+    ingredientList = ndb.StringProperty(required=True)
+
+    Burger = Food_Meal(
+        name = 'userMeal',
+        ingredientList=[
+
+        ]
+    )
