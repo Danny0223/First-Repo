@@ -98,7 +98,7 @@ class EnterInfoHandler(webapp2.RequestHandler):
 
 class FoodInfoHandler(webapp2.RequestHandler):
     def get(self):
-        results_template = the_jinja_env.get_template('templates/Burgers.html')
+        results_template = the_jinja_env.get_template('templates/results.html')
         self.response.write(results_template.render())
 
 
