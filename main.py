@@ -9,10 +9,10 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-
+"""
 def mealStringToUrl(meal_choice):
     imgUrl = ""
-    ingredients = ""
+    jdata = ""
     if meal_choice == "burger":
         imgUrl = "http://img.thedailybeast.com/image/upload/v1493130772/galleries/2010/03/24/the-40-deadliest-fast-food-meals/fast-food---in-out-cheeseburger_bw2cot.jpg"
         ingredients = "bun","onion","patty","lettuce","tomato","cheese"
@@ -45,7 +45,7 @@ def mealStringToUrl(meal_choice):
         ingredients = "flour","milk","butter","sugar","salt"
     elif meal_choice == "casserole":
         imgUrl = "https://images-gmi-pmc.edge-generalmills.com/fe6e9467-247e-4b3d-9694-973a818eeab1.jpg"
-        ingredients = "noodles","tomatosauce","cheese","breadcrumbs","groundbeef"
+        jdata = "noodles","tomatosauce","cheese","breadcrumbs","groundbeef"
     elif meal_choice == "chile":
         imgUrl = "https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/2012-r-xl-four-chile-chili.jpg?itok=_NWkr1bj"
         ingredients = "groundbeef","onion","greenpepper","tomatosauce","beans"
@@ -57,7 +57,44 @@ def mealStringToUrl(meal_choice):
         ingredients = "sausage","cheese","bun","mustard","ketchup"
     else:
         imgUrl = ""
+        ingredients = ""
     return imgUrl
+"""
+def ingredList(meal_choice):
+    ingredients = ""
+    if meal_choice == "burger":
+        ingredients = "bun","onion","patty","lettuce","tomato","cheese"
+    elif meal_choice == "taco":
+        ingredients = "tortilla","meat","salsa","onion","cilantro"
+    elif meal_choice == "pasta":
+        ingredients = "noodles","sauce","tomato","groundbeef"
+    elif meal_choice == "sandwich":
+        ingredients = "turkey","lettuce","tomato","mayo","bread"
+    elif meal_choice == "salad":
+        ingredients = "lettuce","spinach","tomato","croutons","ranch"
+    elif meal_choice == "meatloaf":
+        ingredients = "groundbeef","ketchup","onion","breadcrumbs"
+    elif meal_choice == "enchiladas":
+        ingredients = "tortilla","groundbeef","cheese","redsauce"
+    elif meal_choice == "stew":
+        ingredients = "beef","potato","beefstock","carrot","peas"
+    elif meal_choice == "pizza":
+        ingredients = "dough","cheese","pepperoni","tomatosauce"
+    elif meal_choice == "dumplings":
+        ingredients = "flour","milk","butter","sugar","salt"
+    elif meal_choice == "casserole":
+        ingredients = "noodles","tomatosauce","cheese","breadcrumbs","groundbeef"
+    elif meal_choice == "chile":
+        ingredients = "groundbeef","onion","greenpepper","tomatosauce","beans"
+    elif meal_choice == "macNcheese":
+        ingredients = "noodles","cheese","cheese","breadcrumbs","bacon"
+    elif meal_choice == "hotdog":
+        ingredients = "sausage","cheese","bun","mustard","ketchup"
+    else:
+        ingredients = ""
+    return ingredients
+
+
 
 #MAIN PAGE WHERE USER IS FIRST AT
 
@@ -74,13 +111,13 @@ class ResultsPageHandler(webapp2.RequestHandler):
     def post(self):
         mealChoiceFromForm = self.request.get("meal_choice")
 
-        mealPictureFromFunction = mealStringToUrl(mealChoiceFromForm)
-
+    #    mealPictureFromFunction = mealStringToUrl(mealChoiceFromForm)
+        mealIngredientsFromFunction = ingredList(mealChoiceFromForm)
         var_dict = {
 
             "meal_choice_dict_key": mealChoiceFromForm,
-            "meal_pic_dict_key":mealPictureFromFunction
-
+            #"meal_pic_dict_key": mealPictureFromFunction,
+            "meal_ingredient_dict_key": mealIngredientsFromFunction
         }
 
 
