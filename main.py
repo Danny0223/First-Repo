@@ -21,12 +21,6 @@ class ResultsPageHandler(webapp2.RequestHandler):
         result_template = the_jinja_env.get_template('templates/results.html')
         self.response.write(result_template.render())
 
-"""
-class BlogHandler(webapp2.RequestHandler):
-    def get(self):
-        result_template = the_jinja_env.get_template('templates/new_post.html')
-        self.response.write(result_template.render())
-"""
 
 #DISPLAY TOOL
 class ViewHandler(webapp2.RequestHandler):
@@ -52,21 +46,6 @@ class ViewHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', MainPageHandler),
-    ('/Results', ResultsPageHandler),
-    ('/burgers',BurgerHandler),
-    ('/tacos',TacosHandler),
-    ('/pasta',PastaHandler),
-    ('/sandwich',SandwichHandler),
-    ('/salad',SaladHandler),
-    ('/meatloaf',MeatloafHandler),
-    ('/enchiladas',EnchiladasHandler),
-    ('/stew',StewHandler),
-    ('/pizza',PizzaHandler),
-    ('/dumplings',DumplingsHandler),
-    ('/casserole',CasseroleHandler),
-    ('/chile',ChileHandler),
-    ('/macncheese',MacNCheeseHandler),
-    ('/hotdogs',HotDogHandler),
-    ('/view_all_meals',ViewHandler),
+    ('/Results', ResultsPageHandler)
 
 ], debug=True)
