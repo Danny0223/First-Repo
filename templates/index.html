@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="/static/CSS/index.css">
+  <link rel="stylesheet" href="/static/index.css">
 </head>
   <body>
-  <h1> Calorie Tracker </h1>
-  <h2> Choose Your Meal </h2>
-  <form action ="/Results" method="post">
-  <select name="meal_choice">
-    <option value="burger">Burger</option>
-    <option value="taco">Taco</option>
+    <div id="contain"></div>
+  <div class="heading">
+    <h1> Calorie Tracker </h1>
+    <h2> Choose Your Meal </h2>
+  </div>
+  <form action ="/Results" method="get">
+  <select class= "Meal" >
+    <option value="burgers">Burgers</option>
+    <option value="tacos">Tacos</option>
     <option value="pasta">Pasta</option>
     <option value="sandwich">Sandwich</option>
     <option value="salad">Salad</option>
@@ -25,5 +28,6 @@
   </select>
   <input type = "submit" name="" value="Enter">
   </form>
+  <script scr='/static/script.js'></script>
   </body>
 </html>

@@ -9,12 +9,13 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+
 def mealStringToUrl(meal_choice):
     imgUrl = ""
     ingredients = ""
     if meal_choice == "burger":
         imgUrl = "http://img.thedailybeast.com/image/upload/v1493130772/galleries/2010/03/24/the-40-deadliest-fast-food-meals/fast-food---in-out-cheeseburger_bw2cot.jpg"
-        ingredients = 
+        ingredients =
     elif meal_choice == "taco":
         imgUrl = "https://img1.cookinglight.timeinc.net/sites/default/files/styles/medium_2x/public/1519665233/slow-cooker-carnitas-tacos-ck-1804p38.jpg?itok=Kew1JNyq"
     elif meal_choice == "pasta":
@@ -52,14 +53,6 @@ class MainPageHandler(webapp2.RequestHandler):
         result_template = the_jinja_env.get_template('templates/index.html')
         self.response.write(result_template.render())
 #SECOND PAGE THAT THE USER WILL END UP AT
-class BurgerHandler(webapp2.RequestHandler):
-    def get(self):
-        result_template = the_jinja_env.get_template('templates/burger.html')
-        self.response.write(result_template.render())
-
-
-
-
 class ResultsPageHandler(webapp2.RequestHandler):
     def get(self):
         result_template = the_jinja_env.get_template('templates/results.html')
@@ -70,48 +63,19 @@ class ResultsPageHandler(webapp2.RequestHandler):
 
         mealPictureFromFunction = mealStringToUrl(mealChoiceFromForm)
 
-
-
-
-
         var_dict = {
+
             "meal_choice_dict_key": mealChoiceFromForm,
             "meal_pic_dict_key":mealPictureFromFunction
 
         }
 
+
         result_template = the_jinja_env.get_template('templates/results.html')
         self.response.write(result_template.render(var_dict))
 
-"""
-class BlogHandler(webapp2.RequestHandler):
-    def get(self):
-        result_template = the_jinja_env.get_template('templates/new_post.html')
-        self.response.write(result_template.render())
-"""
-"""
-        meal1.put()
-"""
-
 app = webapp2.WSGIApplication([
     ('/', MainPageHandler),
-    ('/Results', ResultsPageHandler),
-    #('/burgers',BurgerHandler),
-    #('/tacos',TacosHandler),
-    #('/pasta',PastaHandler),
-    #('/sandwich',SandwichHandler),
-    #('/salad',SaladHandler),
-    #('/meatloaf',MeatloafHandler),
-    #('/enchiladas',EnchiladasHandler),
-    #('/stew',StewHandler),
-    #('/pizza',PizzaHandler),
-    #('/dumplings',DumplingsHandler),
-    #('/casserole',CasseroleHandler),
-    #('/chile',ChileHandler),
-    #('/macncheese',MacNCheeseHandler),
-    #('/hotdogs',HotDogHandler),
-    #('/view_all_meals',ViewHandler)
-    #('/Results', ResultsPageHandler)
-
+    ('/Results', ResultsPageHandler)
 
 ], debug=True)
