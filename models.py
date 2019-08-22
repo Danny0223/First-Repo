@@ -7,6 +7,18 @@ class Food_Meal(ndb.Model):
     Burger = Food_Meal(
         name = 'userMeal',
         ingredientList=[
+            ingredient1="bun"
+            ingredient2="onion"
+
+        ]
+    )
+"""
+"""
+    Burger = Food_Meal(
+        name = 'userMeal',
+        ingredientList=[
+            ingredient1="bun"
+            ingredient2="onion"
 
         ]
     )
