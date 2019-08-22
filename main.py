@@ -41,7 +41,6 @@ class ResultsPageHandler(webapp2.RequestHandler):
         result_template = the_jinja_env.get_template('templates/results.html')
         self.response.write(result_template.render())
 
-<<<<<<< HEAD
     def post(self):
         mealChoiceFromForm = self.request.get("meal_choice")
 
@@ -65,22 +64,12 @@ class BlogHandler(webapp2.RequestHandler):
         result_template = the_jinja_env.get_template('templates/new_post.html')
         self.response.write(result_template.render())
 """
-=======
->>>>>>> 224fcbe88fb0a230e8a30479669e027dd4c932ed
-
-#DISPLAY TOOL
-class ViewHandler(webapp2.RequestHandler):
-    def get(self):
-        result_template = the_jinja_env.get_template('templates/view_all_meals.html')
-        self.response.write(result_template.render())
 """
-        meal1= Food_Meal(name = Choose_Your_Meal)
         meal1.put()
 """
 
 app = webapp2.WSGIApplication([
     ('/', MainPageHandler),
-<<<<<<< HEAD
     ('/Results', ResultsPageHandler),
     #('/burgers',BurgerHandler),
     #('/tacos',TacosHandler),
@@ -96,9 +85,8 @@ app = webapp2.WSGIApplication([
     #('/chile',ChileHandler),
     #('/macncheese',MacNCheeseHandler),
     #('/hotdogs',HotDogHandler),
-    ('/view_all_meals',ViewHandler),
-=======
-    ('/Results', ResultsPageHandler)
->>>>>>> 224fcbe88fb0a230e8a30479669e027dd4c932ed
+    #('/view_all_meals',ViewHandler)
+    #('/Results', ResultsPageHandler)
+
 
 ], debug=True)
