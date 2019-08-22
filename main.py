@@ -53,7 +53,20 @@ class ViewHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainPageHandler),
     ('/Results', ResultsPageHandler),
-    #('/blog',BlogHandler),
-    ('/view_all_meals',ViewHandler)
+    ('/burgers',BurgerHandler),
+    ('/tacos',TacosHandler),
+    ('/pasta',PastaHandler),
+    ('/sandwich',SandwichHandler),
+    ('/salad',SaladHandler),
+    ('/meatloaf',MeatloafHandler),
+    ('/enchiladas',EnchiladasHandler),
+    ('/stew',StewHandler),
+    ('/pizza',PizzaHandler),
+    ('/dumplings',DumplingsHandler),
+    ('/casserole',CasseroleHandler),
+    ('/chile',ChileHandler),
+    ('/macncheese',MacNCheeseHandler),
+    ('/hotdogs',HotDogHandler),
+    ('/view_all_meals',ViewHandler),
 
 ], debug=True)
