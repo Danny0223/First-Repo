@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="static/CSS/foods.css">
+  <link rel="stylesheet" href="/static/index.css">
 </head>
   <body>
+<<<<<<< HEAD
   <h1> Calorie Tracker </h1>
   <h2> Choose Your Meal </h2>
   <form action ="/Results" method="post">
   <select name="meal_choice">
     <option value="burger">Burger</option>
     <option value="taco">Taco</option>
+=======
+    <div id="contain"></div>
+  <div class="heading">
+    <h1> Calorie Tracker </h1>
+    <h2> Choose Your Meal </h2>
+  </div>
+  <form action ="/Results" method="get">
+  <select class= "Meal" >
+    <option value="burgers">Burgers</option>
+    <option value="tacos">Tacos</option>
+>>>>>>> 224fcbe88fb0a230e8a30479669e027dd4c932ed
     <option value="pasta">Pasta</option>
     <option value="sandwich">Sandwich</option>
     <option value="salad">Salad</option>
@@ -20,10 +32,11 @@
     <option value="dumplings">Dumplings</option>
     <option value="casserole">Casserole</option>
     <option value="chile">Chile</option>
-    <option value="mac and cheese">Mac and Cheese</option>
-    <option value="hot dog">Hot Dog</option>
+    <option value="macNcheese">Mac and Cheese</option>
+    <option value="hotdog">Hot Dog</option>
   </select>
   <input type = "submit" name="" value="Enter">
   </form>
+  <script scr='/static/script.js'></script>
   </body>
 </html>
