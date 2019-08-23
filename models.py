@@ -3,6 +3,7 @@ from google.appengine.ext import ndb
 class Food_Meal(ndb.Model):
     name = ndb.StringProperty(required=True)
     ingredientList = ndb.StringProperty(required=True)
+
     # Burger = Food_Meal(
     #     name = 'userMeal',
     #     ingredientList=[
@@ -31,7 +32,7 @@ class Food_Meal(ndb.Model):
     #     name = 'userMeal',
     #     ingredientList=[
     #         ingred1="Noodles",
-    #         ingred2="Sauce",
+    #         ingred2="S auce",
     #         ingred3="tomato",
     #         ingred4="groundbeef"
     #     ]
@@ -119,7 +120,7 @@ class Food_Meal(ndb.Model):
     #     name = 'userMeal',
     #     ingredientList=[
     #         ingred1="noodles",
-    #         ingred2="tamotesauce",
+    #         ingred2="tomatosauce",
     #         ingred3="cheese",
     #         ingred4="breadcrumbs",
     #         ingred5="groundbeef",
@@ -132,7 +133,7 @@ class Food_Meal(ndb.Model):
     #         ingred1="groundbeef",
     #         ingred2="onion",
     #         ingred3="greenpepper",
-    #         ingred4="tamotesauce",
+    #         ingred4="tomatosauce",
     #         ingred5="beans"
     #
     #     ]

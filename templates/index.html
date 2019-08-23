@@ -9,8 +9,8 @@
     <h1> Calorie Tracker </h1>
     <h2> Choose Your Meal </h2>
   </div>
-  <form action ="/Results" method="get">
-  <select class= "Meal" >
+  <form action ="/Results" method="post">
+  <select name= "meal_choice" >
     <option value="burgers">Burgers</option>
     <option value="tacos">Tacos</option>
     <option value="pasta">Pasta</option>
@@ -28,6 +28,5 @@
   </select>
   <input type = "submit" name="" value="Enter">
   </form>
-  <script scr='/static/script.js'></script>
   </body>
 </html>
