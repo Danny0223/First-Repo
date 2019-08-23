@@ -46,33 +46,33 @@ def mealStringToUrl(meal_choice):
 def mealCalories(meal_choice):
     calories = ""
     if meal_choice == "burger":
-        calories = "596"
+        calories = "Total Cal: 596"
     elif meal_choice == "tacos":
-        calories = "492"
+        calories = "Total Cal: 492"
     elif meal_choice == "pasta":
-        calories = "587"
+        calories = "Total Cal: 587"
     elif meal_choice == "sandwich":
-        calories = "203"
+        calories = "Total Cal: 203"
     elif meal_choice == "salad":
-        calories = "183"
+        calories = "Total Cal: 183"
     elif meal_choice == "meatloaf":
-        calories = "809"
+        calories = "Total Cal: 809"
     elif meal_choice == "enchiladas":
-        calories = "857"
+        calories = "Total Cal: 857"
     elif meal_choice == "stew":
-        calories = "448"
+        calories = "Total Cal: 448"
     elif meal_choice == "pizza":
-        calories = "729"
+        calories = "Total Cal: 729"
     elif meal_choice == "dumplings":
-        calories = "420"
+        calories = "Total Cal: 420"
     elif meal_choice == "casserole":
-        calories = "1029"
+        calories = "Total Cal: 1029"
     elif meal_choice == "chile":
-        calories = "547"
+        calories = "Total Cal: 547"
     elif meal_choice == "macNcheese":
-        calories = "743"
+        calories = "Total Cal: 743"
     elif meal_choice == "hotdog":
-        calories = "410"
+        calories = "Total Cal: 410"
     else:
         calories = ""
     return calories
