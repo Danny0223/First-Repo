@@ -62,17 +62,17 @@ def mealCalories(meal_choice):
     elif meal_choice == "stew":
         calories = "448"
     elif meal_choice == "pizza":
-        calories = "222"
+        calories = "729"
     elif meal_choice == "dumplings":
-        calories = "333"
+        calories = "420"
     elif meal_choice == "casserole":
-        calories = "444"
+        calories = "1029"
     elif meal_choice == "chile":
-        calories = "555"
+        calories = "547"
     elif meal_choice == "macNcheese":
-        calories = "666"
+        calories = "743"
     elif meal_choice == "hotdog":
-        calories = "777"
+        calories = "410"
     else:
         calories = ""
     return calories
@@ -80,33 +80,33 @@ def mealCalories(meal_choice):
 def mealIngred(meal_choice):
     ingred = ""
     if meal_choice == "burger":
-        ingred = "<h1>bun:133<br>onion:32<br>groundbeef:336<br>lettuce:10<br>tomato:22<br>cheese:63</h1>"
+        ingred = "<h1>bun:133 cal<br>onion:32 cal<br>groundbeef:336 cal<br>lettuce:10 cal<br>tomato:22 cal<br>cheese:63 cal</h1>"
     elif meal_choice == "tacos":
-        ingred = "<h1>tortilla:112<br>groundbeef:336<br>salse:10<br>onion:32<br>cilantro:22</h1>"
+        ingred = "<h1>tortilla:112 cal<br>groundbeef:336 cal<br>salse:10 cal<br>onion:32 cal<br>cilantro:22 cal</h1>"
     elif meal_choice == "pasta":
-        ingred = "<h1>noodles:200<br>tomatosauce:29<br>tomato:22<br>groundbeef:336</h1>"
+        ingred = "<h1>noodles:200 cal<br>tomatosauce:29 cal<br>tomato:22 cal<br>groundbeef:336 cal</h1>"
     elif meal_choice == "sandwich":
-        ingred = "<h1>turnkey:45<br>lettuce:10<br>tamato:22<br>bread:69<br>mayo:57</h1>"
+        ingred = "<h1>turnkey:45 cal<br>lettuce:10 cal<br>tamato:22 cal<br>bread:69 cal<br>mayo:57 cal</h1>"
     elif meal_choice == "salad":
-        ingred = "<h1>lettuce:75<br>spinach:7<br>choppoedtamto:10<br>croutons:31<br>ranch:60</h1>"
+        ingred = "<h1>lettuce:75 cal<br>spinach:7 cal<br>choppoedtamto:10 cal<br>croutons:31 cal<br>ranch:60 cal</h1>"
     elif meal_choice == "meatloaf":
-        ingred = "<h1>groundbeef:336<br>groundbeef:336<br>ketcup:15<br>ketchup:15<br>onion:32<br>breadcrumbs:107</h1>"
+        ingred = "<h1>groundbeef:336 cal<br>groundbeef:336 cal<br>ketcup:15 cal<br>ketchup:15 cal<br>onion:32 cal<br>breadcrumbs:107 cal</h1>"
     elif meal_choice == "enchiladas":
-        ingred = "<h1>tortilla:112<br>tortilla:112<br>tortilla:112<br>groundbeef:336<br>cheese:120<br>redsauce:65</h1>"
+        ingred = "<h1>tortilla:112 cal<br>tortilla:112 cal<br>tortilla:112 cal<br>groundbeef:336 cal<br>cheese:120 cal<br>redsauce:65 cal</h1>"
     elif meal_choice == "stew":
-        ingred = "<h1>beef:256<br>potatoe:67<br>beefstock:31<br>carrot:27<br>peas:67</h1>"
+        ingred = "<h1>beef:256 cal<br>potatoe:67 cal<br>beefstock:31 cal<br>carrot:27 cal<br>peas:67 cal</h1>"
     elif meal_choice == "pizza":
-        ingred = "<h1>dough:160<br>cheese:340<br>pepperoni:200<br>tomatosauce:29</h1>"
+        ingred = "<h1>dough:160 cal<br>cheese:340 cal<br>pepperoni:200 cal<br>tomatosauce:29 cal</h1>"
     elif meal_choice == "dumplings":
-        ingred = "<h1>flour:104<br>milk:149<br>butter:150<br>sugar:17</h1>"
+        ingred = "<h1>flour:104 cal<br>milk:149 cal<br>butter:150 cal<br>sugar:17 cal</h1>"
     elif meal_choice == "casserole":
-        ingred = "<h1>noodles:209<br>tomatosauce:29<br>mozzarella:348<br>breadcrumbs:107<br>groundbeef:336</h1>"
+        ingred = "<h1>noodles:209 cal<br>tomatosauce:29 cal<br>mozzarella:348 cal<br>breadcrumbs:107 cal<br>groundbeef:336 cal</h1>"
     elif meal_choice == "chili":
-        ingred = "<h1>groundbeef:336<br>onion:32<br>greenpepper:38<br>tomatosauce:29<br>beans:112</h1>"
+        ingred = "<h1>groundbeef:336 cal<br>onion:32 cal<br>greenpepper:38 cal<br>tomatosauce:29 cal<br>beans:112 cal</h1>"
     elif meal_choice == "macNcheese":
-        ingred = "<h1>noodles:209<br>mozzarella:348<br>breadcrumbs:107<br>bacon:43</h1>"
+        ingred = "<h1>noodles:209 cal<br>mozzarella:348 cal<br>breadcrumbs:107 cal<br>bacon:43 cal</h1>"
     elif meal_choice == "hotdog":
-        ingred = "<h1>sausage:209<br>cheese:63<br>sausageBun:144<br>mustard<br>mustard=8<br>ketchup:16</h1>"
+        ingred = "<h1>sausage:209 cal<br>cheese:63 cal<br>sausageBun:144 cal<br>mustard:8 cal<br>ketchup:16 cal</h1>"
     else:
         ingred = ""
     return ingred
