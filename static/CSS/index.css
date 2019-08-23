@@ -71,6 +71,9 @@ form input:hover {
   position: fixed;
   background-color: black;
   animation: reveal linear 1s forwards;
+  background-image: url("https://images.pexels.com/photos/1056563/pexels-photo-1056563.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-position: center;
 }
 
 @keyframes reveal {
